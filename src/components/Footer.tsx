@@ -28,8 +28,14 @@ const Footer: React.FC = () => {
                 Transformando a gestão de estacionamento com tecnologia avançada de visão computacional.
               </p>
               <div className="flex space-x-4">
-                {/*Link aqui no href*/}
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#07ef5c] transition-colors" aria-label="LinkedIn">
+                {/* Link do LinkedIn atualizado abaixo */}
+                <a 
+                  href="https://www.linkedin.com/company/visioncore" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-[#07ef5c] transition-colors" 
+                  aria-label="LinkedIn"
+                >
                   <Linkedin size={20} />
                 </a>
               </div>
@@ -52,28 +58,6 @@ const Footer: React.FC = () => {
                     >
                       {item.label}
                     </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Serviços</h3>
-              <ul className="space-y-2">
-                {[
-                  'Soluções de visão computacional',
-                  'Gestão de estacionamento',
-                  'Análise de dados',
-                  'Implementações personalizadas',
-                  'Manutenção e suporte',
-                ].map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-[#07ef5c] transition-colors"
-                    >
-                      {item}
-                    </a>
                   </li>
                 ))}
               </ul>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import heroImage from '../assets/images/hero-vision.jpg';
 
 const Hero: React.FC = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -47,20 +48,15 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 z-10 pt-24">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-white" data-aos="fade-up">
-            <div className="inline-block px-3 py-1 rounded-full bg-[#2a616e]/20 border border-[#2a616e] mb-6">
-              <span className="text-[#07ef5c] font-medium">
-                Gestão Revolucionária de Estacionamento
-              </span>
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="block">Estacionamento Inteligente com</span>
+              <span>Estacionamento Inteligente com </span>
               <span className="text-[#07ef5c]">
                 Tecnologia de Visão Computacional
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl">
               Supervisão total, segurança em tempo real, decisões inteligentes
-              com base em dados. Com o VISION CORE, seu estacionamento se
+              com base em dados. Com o VISIONCORE, seu estacionamento se
               transforma em um ambiente mais seguro, eficiente e inteligente.
             </p>
             
@@ -71,20 +67,12 @@ const Hero: React.FC = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#13b37e]/20 to-[#07ef5c]/20 rounded-lg blur-lg"></div>
               <div className="relative bg-[#1d2938] border border-[#2a616e] rounded-lg p-2 shadow-xl">
                 <img
-                  src="https://www.centernorte.com.br/wp-content/uploads/sites/2/2020/01/banner-estacione.jpg"
-                  alt="Parking lot with computer vision overlay"
+                  src={heroImage}
+                  alt="Estacionamento com detecção de vagas por visão computacional"
                   className="rounded w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1d2938] via-transparent to-transparent rounded"></div>
-                <div className="absolute top-1/4 left-1/3 w-24 h-12 border-2 border-[#07ef5c] rounded opacity-70 animate-pulse"></div>
-                <div
-                  className="absolute top-2/3 right-1/4 w-16 h-8 border-2 border-[#07ef5c] rounded opacity-70 animate-pulse"
-                  style={{ animationDelay: "0.5s" }}
-                ></div>
-                <div
-                  className="absolute top-1/2 left-1/4 w-20 h-10 border-2 border-[#07ef5c] rounded opacity-70 animate-pulse"
-                  style={{ animationDelay: "1s" }}
-                ></div>
+                
               </div>
             </div>
           </div>

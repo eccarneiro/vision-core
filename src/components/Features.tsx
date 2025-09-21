@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, BarChart3, Clock, Camera, LineChart, Users } from 'lucide-react';
+import { LayoutDashboard, AlertTriangle, BarChart3, Camera, Cloud, Scaling } from 'lucide-react';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -22,34 +22,34 @@ const FeatureCard: React.FC<FeatureProps> = ({ icon, title, description }) => {
 const Features: React.FC = () => {
   const features = [
     {
-      icon: <Eye size={24} />,
-      title: "Tecnologia de visão computacional",
-      description: "Algoritmos avançados de IA que detectam e analisam com precisão vagas de estacionamento em tempo real."
+      icon: <LayoutDashboard size={24} />,
+      title: "Dashboard Operacional",
+      description: "Visualize o status de cada vaga em tempo real através de um mapa interativo do seu estacionamento e acompanhe as taxas de ocupação por setor."
+    },
+    {
+      icon: <AlertTriangle size={24} />,
+      title: "Detecção de Anomalias",
+      description: "Nossa I.A. identifica e notifica sobre veículos em locais proibidos, que excedem o tempo limite ou apresentam movimentação suspeita."
     },
     {
       icon: <BarChart3 size={24} />,
-      title: "Análise abrangente",
-      description: "Relatórios detalhados e insights sobre uso de estacionamento, horários de pico e estatísticas de duração."
-    },
-    {
-      icon: <Clock size={24} />,
-      title: "Monitoramento em tempo real",
-      description: "Atualizações ao vivo sobre disponibilidade de estacionamento com recursos de notificação imediata."
+      title: "Relatórios e Insights",
+      description: "Acesse dados históricos sobre padrões de uso, horários de pico e duração de permanência para otimizar a precificação e a gestão de recursos."
     },
     {
       icon: <Camera size={24} />,
-      title: "Funciona com câmeras existentes",
-      description: "Integre-se à sua infraestrutura de CFTV atual sem custos adicionais de hardware."
+      title: "Integração com CFTV Existente",
+      description: "Implemente o VisionCore de forma rápida e com baixo custo, aproveitando seu sistema de câmeras atual, sem necessidade de hardware proprietário."
     },
     {
-      icon: <LineChart size={24} />,
-      title: "Previsão de tendências",
-      description: "Preveja a demanda por estacionamento com base em dados históricos e condições atuais."
+      icon: <Cloud size={24} />,
+      title: "Plataforma 100% em Nuvem",
+      description: "Monitore e gerencie seu estacionamento de qualquer lugar e a qualquer momento através de nossa plataforma web segura e responsiva."
     },
     {
-      icon: <Users size={24} />,
-      title: "Melhor experiência do cliente",
-      description: "Reduza o tempo gasto procurando vagas de estacionamento e aumente a satisfação do cliente."
+      icon: <Scaling size={24} />,
+      title: "Arquitetura Escalável",
+      description: "Comece com um setor e expanda a cobertura para múltiplos estacionamentos. Nossa solução se adapta ao crescimento do seu negócio."
     }
   ];
 
@@ -58,10 +58,10 @@ const Features: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            RECURSOS INTELIGENTES PARA  <span className="text-[#07ef5c]">ESTACIONAMENTOS INTELIGENTES</span>
+            RECURSOS INTELIGENTES PARA <span className="text-[#07ef5c]">ESTACIONAMENTOS INTELIGENTES</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-          Nossa solução de visão computacional transforma seu gerenciamento de estacionamento com recursos poderosos!
+            Nossa solução de visão computacional transforma seu gerenciamento de estacionamento com recursos poderosos!
           </p>
         </div>
 
