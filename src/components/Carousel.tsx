@@ -13,19 +13,19 @@ const Carousel: React.FC = () => {
 
   const slides: SlideProps[] = [
     {
-      image: "https://www.serpro.gov.br/menu/noticias/noticias-2022/como-emitir-credencial-estacionamento-idoso/@@images/image/large",
-      title: "Monitoramento em tempo real da ocupação de vagas",
-      description: "Monitore a disponibilidade de vagas de estacionamento em tempo real em todas as suas instalações."
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Dashboard Dinâmico e Intuitivo",
+      description: "Tenha uma visão panorâmica das operações. Monitore vagas livres, fluxo de veículos e indicadores de performance em tempo real em uma única tela."
     },
     {
-      image: "https://santodigital.com.br/wp-content/uploads/2021/11/Business-Intelligence-e-analise-de-dados-1.jpg",
-      title: "Tomada de decisão baseada em dados",
-      description: "Tenha acesso a análises completas para melhorar a eficiência do seu estacionamento."
+      image: "https://images.unsplash.com/photo-1573495627361-d9b87960b12d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Alertas Inteligentes e Gestão de Incidentes",
+      description: "Receba notificações automáticas sobre estacionamento irregular, tempo excedido e outras anomalias, permitindo uma ação rápida e eficaz."
     },
     {
-      image: "https://st2.depositphotos.com/1441511/5482/i/450/depositphotos_54821609-stock-photo-happy-man-inside-car-of.jpg",
-      title: "Experiência aprimorada do cliente",
-      description: "Garanta uma experiência fluida ao motorista com orientação inteligente até as vagas disponíveis."
+      image: "https://images.unsplash.com/photo-1709715357510-b687304cee3a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Relatórios para Decisões Estratégicas",
+      description: "Transforme dados em insights. Gere relatórios sobre horários de pico, duração de permanência e tendências para otimizar a gestão e a receita."
     }
   ];
 
@@ -59,10 +59,10 @@ const Carousel: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="text-[#07ef5c]">VISION CORE</span> EM AÇÃO
+            VISION<span className="text-[#07ef5c]">CORE</span> EM AÇÃO
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-          Veja como nossa tecnologia transforma a gestão de estacionamento
+            Veja como nossa tecnologia transforma a gestão de estacionamento
           </p>
         </div>
 
@@ -83,11 +83,7 @@ const Carousel: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1d2938] via-[#1d2938]/30 to-transparent flex flex-col justify-end p-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{slide.title}</h3>
                     <p className="text-gray-200 mb-4">{slide.description}</p>
-                    <button className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-6 py-2 rounded-full transition-all duration-300 self-start">
-                      Entrar em contato
-                    </button>
                   </div>
-
                 </div>
               ))}
             </div>

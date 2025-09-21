@@ -4,24 +4,28 @@ import { Camera, Database, BarChart, Zap } from 'lucide-react';
 const HowItWorks: React.FC = () => {
   const steps = [
     {
+      number: '1',
       icon: <Camera className="w-10 h-10 text-[#07ef5c]" />,
-      title: "Captura de Vídeo",
-      description: "Câmeras existentes capturam imagens de vídeo do seu estacionamento."
+      title: "Captura e Integração",
+      description: "O sistema utiliza a infraestrutura de câmeras (CFTV) já existente no local para capturar o fluxo de vídeo do estacionamento de forma contínua."
     },
     {
+      number: '2',
       icon: <Zap className="w-10 h-10 text-[#07ef5c]" />,
-      title: "Processamento de IA",
-      description: "Nossos algoritmos de visão computacional analisam imagens em tempo real para identificar vagas de estacionamento e infrações."
+      title: "Processamento com I.A.",
+      description: "Nossa Inteligência Artificial processa o vídeo em tempo real, aplicando algoritmos de visão computacional para detectar veículos, identificar vagas livres ou ocupadas e sinalizar anomalias."
     },
     {
+      number : '3',
       icon: <Database className="w-10 h-10 text-[#07ef5c]" />,
-      title: "Armazenamento de dados",
-      description: "Os dados de estacionamento são armazenados e organizados com segurança para fácil acesso e análise."
+      title: "Extração e Envio de Dados",
+      description: "As informações extraídas, como status das vagas e eventos, são estruturadas e enviadas de forma segura para a nuvem, garantindo escalabilidade e acesso a partir de qualquer lugar."
     },
     {
+      number : '4',
       icon: <BarChart className="w-10 h-10 text-[#07ef5c]" />,
-      title: "Insights e Relatórios",
-      description: "Análises abrangentes fornecem insights práticos para otimizar suas operações de estacionamento."
+      title: "Análise e Visualização",
+      description: "Os dados são transformados em informações visuais no seu dashboard. Gere relatórios sobre tendências, horários de pico e taxas de ocupação para tomar decisões estratégicas e otimizar a gestão."
     }
   ];
 
@@ -30,10 +34,11 @@ const HowItWorks: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            COMO <span className="text-[#07ef5c]">VISION CORE</span> FUNCIONA
+            COMO O VISION<span className="text-[#07ef5c]">CORE</span> FUNCIONA
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-          Integramos nossa tecnologia à sua estrutura existente, entregando uma gestão de estacionamento mais inteligente e eficiente</p>
+            Integramos nossa tecnologia à sua estrutura existente, entregando uma gestão de estacionamento mais inteligente e eficiente.
+          </p>
         </div>
 
         <div className="relative">
@@ -46,15 +51,19 @@ const HowItWorks: React.FC = () => {
                 <div className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Step number circle for desktop */}
                   <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-[#1d2938] border-2 border-[#07ef5c] items-center justify-center">
-                    <span className="text-[#07ef5c] font-bold">{index + 1}</span>
+                    <span className="text-[#07ef5c] font-bold">{step.number}</span>
                   </div>
                   
                   {/* Step content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-[#1d2938]/80 backdrop-blur-sm p-6 rounded-lg border border-[#2a616e]/30 shadow-lg">
+                    <div className={`
+                      bg-[#1d2938]/80 backdrop-blur-sm p-6 rounded-lg border border-[#2a616e]/30 shadow-lg 
+                      md:flex md:flex-col ${/* Adiciona flexbox no desktop */''}
+                      ${index % 2 === 0 ? 'md:items-end' : 'md:items-start' /* Alinha os itens (incluindo o ícone) */}
+                    `}>
                       <div className="flex items-center mb-4 gap-3 md:hidden">
                         <div className="flex w-12 h-12 rounded-full bg-[#1d2938] border-2 border-[#07ef5c] items-center justify-center">
-                          <span className="text-[#07ef5c] font-bold">{index + 1}</span>
+                          <span className="text-[#07ef5c] font-bold">{step.title.split('.')[0]}</span>
                         </div>
                         <h3 className="text-xl font-semibold text-white">{step.title}</h3>
                       </div>

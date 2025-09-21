@@ -19,7 +19,11 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
+    // Placeholder para a lógica de envio de e-mail
+    console.log("Dados do formulário a serem enviados:", formData);
+
+    // Simulação de tempo de envio
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -37,16 +41,19 @@ const Contact: React.FC = () => {
             Entre em <span className="text-[#07ef5c]">Contato</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-          Transforme seu estacionamento com tecnologia inteligente. Solicite uma demonstração agora mesmo.
+            Transforme seu estacionamento com tecnologia inteligente. Fale conosco e tire suas dúvidas.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12">
-          <div className="lg:w-1/2">
-            <div className="bg-gradient-to-br from-[#1d2938] to-[#2a616e]/20 rounded-xl p-8 border border-[#2a616e]/30 shadow-xl h-full">
-              <h3 className="text-2xl font-bold text-white mb-6">Informações de contato</h3>
+        <div className="flex flex-col gap-12 max-w-4xl mx-auto">
+          
+          {/* Bloco de Canais de Atendimento */}
+          <div>
+            <div className="bg-gradient-to-br from-[#1d2938] to-[#2a616e]/20 rounded-xl p-8 border border-[#2a616e]/30 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-6">Canais de Atendimento</h3>
               
               <div className="space-y-6">
+                {/* E-mail */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[#13b37e]/10 p-3 rounded-full">
                     <Mail className="w-6 h-6 text-[#07ef5c]" />
@@ -59,38 +66,26 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
+                {/* WhatsApp */}
                 <div className="flex items-start gap-4">
                   <div className="bg-[#13b37e]/10 p-3 rounded-full">
                     <Phone className="w-6 h-6 text-[#07ef5c]" />
                   </div>
                   <div>
-                    <p className="text-gray-300 mb-1">Entre em contato</p>
-                    <a href="tel:+15551234567" className="text-white hover:text-[#07ef5c] transition-colors">
-                      +55 (62) 9 9999-9999
+                    <p className="text-gray-300 mb-1">Fale pelo WhatsApp</p>
+                    <a href="https://wa.me/5562992440579" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#07ef5c] transition-colors">
+                      +55 (62) 9 9244-0579
                     </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-4">
-                </div>
-              </div>
-              
-              <div className="mt-12">
-                <h4 className="text-xl font-bold text-white mb-4">Agende uma demonstração</h4>
-                <p className="text-gray-300 mb-6">
-                Veja como o VISION CORE pode transformar seu estacionamento — agende uma demonstração adaptada às suas necessidades.
-                </p>
-                <button className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                  <span>Agendar uma demonstração</span>
-                  <Send size={16} />
-                </button>
               </div>
             </div>
           </div>
           
-          <div className="lg:w-1/2">
+          {/* Bloco do Formulário */}
+          <div>
             <div className="bg-gradient-to-br from-[#1d2938] to-[#2a616e]/20 rounded-xl p-8 border border-[#2a616e]/30 shadow-xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Fale conosco e tire suas dúvidas</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Envie uma mensagem</h3>
               
               {submitted ? (
                 <div className="bg-[#13b37e]/20 border border-[#13b37e] rounded-lg p-4 text-white">
@@ -98,6 +93,7 @@ const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Inputs do formulário */}
                   <div>
                     <label htmlFor="name" className="block text-white mb-2">Seu nome</label>
                     <input
@@ -127,7 +123,7 @@ const Contact: React.FC = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="company" className="block text-white mb-2">Nome da usa Empresa</label>
+                    <label htmlFor="company" className="block text-white mb-2">Nome da sua Empresa</label>
                     <input
                       type="text"
                       id="company"
@@ -149,7 +145,7 @@ const Contact: React.FC = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full bg-[#1d2938] border border-[#2a616e] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#07ef5c] transition-colors resize-none"
-                      placeholder="Como podemos ajuda-lo?"
+                      placeholder="Como podemos ajudá-lo?"
                     ></textarea>
                   </div>
                   

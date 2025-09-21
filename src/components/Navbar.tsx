@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false); // Fecha o menu no modo mobile
+      setIsMenuOpen(false);
     }
   };
 
@@ -54,7 +54,11 @@ const Navbar: React.FC = () => {
                 {item.label}
               </button>
             ))}
-            <button className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
+            {/* --- BOTÃO ATUALIZADO (DESKTOP) --- */}
+            <button 
+              onClick={() => handleLinkClick('contact')}
+              className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
+            >
               Entrar em contato
             </button>
           </div>
@@ -88,7 +92,11 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <button className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-6 py-2 rounded-full transition-all duration-300 w-full">
+              {/* --- BOTÃO ATUALIZADO (MOBILE) --- */}
+              <button 
+                onClick={() => handleLinkClick('contact')}
+                className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-6 py-2 rounded-full transition-all duration-300 w-full"
+              >
                 Entrar em contato
               </button>
             </div>
