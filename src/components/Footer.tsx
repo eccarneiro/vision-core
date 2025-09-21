@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assets/logo';
-import { Facebook, Twitter, Linkedin, Instagram, ArrowUp } from 'lucide-react';
+import { Linkedin, ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -28,17 +28,9 @@ const Footer: React.FC = () => {
                 Transformando a gestão de estacionamento com tecnologia avançada de visão computacional.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-[#07ef5c] transition-colors">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-[#07ef5c] transition-colors">
-                  <Twitter size={20} />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-[#07ef5c] transition-colors">
+                {/*Link aqui no href*/}
+                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#07ef5c] transition-colors" aria-label="LinkedIn">
                   <Linkedin size={20} />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-[#07ef5c] transition-colors">
-                  <Instagram size={20} />
                 </a>
               </div>
             </div>
@@ -87,39 +79,15 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-              <p className="text-gray-300 mb-4">
-                Assine para receber as últimas atualizações sobre nossa tecnologia e serviços.
-              </p>
-              <form className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="bg-[#2a616e]/20 border border-[#2a616e] rounded-l-lg px-4 py-2 text-white focus:outline-none focus:border-[#07ef5c] transition-colors flex-grow"
-                />
-                <button
-                  type="submit"
-                  className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-4 py-2 rounded-r-lg transition-colors"
-                >
-                  Inscrever-se
-                </button>
-              </form>
-            </div>
           </div>
         </div>
 
         <div className="border-t border-[#2a616e]/30 py-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            &copy; {new Date().getFullYear()} VISION CORE. All rights reserved.
+            &copy; {new Date().getFullYear()} VISIONCORE. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-gray-300 hover:text-[#07ef5c] transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="#" className="text-sm text-gray-300 hover:text-[#07ef5c] transition-colors">
-              Termos de Serviço
-            </a>
+            
             <button
               onClick={scrollToTop}
               className="bg-[#2a616e]/30 hover:bg-[#13b37e] p-2 rounded-full text-white transition-colors"

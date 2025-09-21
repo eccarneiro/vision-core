@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { ChevronDown } from "lucide-react";
 
 const Hero: React.FC = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -64,14 +63,7 @@ const Hero: React.FC = () => {
               com base em dados. Com o VISION CORE, seu estacionamento se
               transforma em um ambiente mais seguro, eficiente e inteligente.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#13b37e] hover:bg-[#07ef5c] text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 font-medium">
-              Agende uma Demonstração
-              </button>
-              <button className="border border-[#2a616e] hover:border-[#07ef5c] text-white px-8 py-3 rounded-full transition-all duration-300 hover:bg-[#2a616e]/20">
-                Saiba mais
-              </button>
-            </div>
+            
           </div>
 
           <div className="md:w-1/2 mt-10 md:mt-0" data-aos="fade-left">
@@ -98,11 +90,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-          <a href="#features" aria-label="Scroll down">
-            <ChevronDown size={24} />
-          </a>
-        </div>
       </div>
     </section>
   );
