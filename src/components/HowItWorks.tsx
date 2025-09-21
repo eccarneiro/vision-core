@@ -58,12 +58,13 @@ const HowItWorks: React.FC = () => {
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
                     <div className={`
                       bg-[#1d2938]/80 backdrop-blur-sm p-6 rounded-lg border border-[#2a616e]/30 shadow-lg 
-                      md:flex md:flex-col ${/* Adiciona flexbox no desktop */''}
-                      ${index % 2 === 0 ? 'md:items-end' : 'md:items-start' /* Alinha os itens (incluindo o ícone) */}
+                      md:flex md:flex-col
+                      ${index % 2 === 0 ? 'md:items-end' : 'md:items-start'}
                     `}>
                       <div className="flex items-center mb-4 gap-3 md:hidden">
                         <div className="flex w-12 h-12 rounded-full bg-[#1d2938] border-2 border-[#07ef5c] items-center justify-center">
-                          <span className="text-[#07ef5c] font-bold">{step.title.split('.')[0]}</span>
+                          {/* --- CORREÇÃO APLICADA AQUI --- */}
+                          <span className="text-[#07ef5c] font-bold">{step.number}</span>
                         </div>
                         <h3 className="text-xl font-semibold text-white">{step.title}</h3>
                       </div>
