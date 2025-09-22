@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assets/logo';
-import { Linkedin, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -27,8 +27,8 @@ const Footer: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 Transformando a gestão de estacionamento com tecnologia avançada de visão computacional.
               </p>
-              <div className="flex space-x-4">
-                {/* Link do LinkedIn atualizado abaixo */}
+              {/* <div className="flex space-x-4">
+                Link do LinkedIn atualizado abaixo
                 <a 
                   href="https://www.linkedin.com/company/visioncore" 
                   target="_blank" 
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 >
                   <Linkedin size={20} />
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div>
